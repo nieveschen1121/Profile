@@ -160,5 +160,10 @@ var levelLookup = {
 
 var vm = new Vue({
   el: "#app",
-  data: resume
+  data: resume,
+  methods: {
+    ToTop: function (e) {
+      $("html, body").animate({ scrollTop: 0 }, 300);
+    }
+  }
 });
