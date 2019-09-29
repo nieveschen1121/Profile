@@ -59,7 +59,7 @@ html, body {
 }
 .left .leftMiddle .triangle1, .left .leftMiddle .triangle2 {
   position: absolute;
-  top: -50px;
+  top: -45px;
 }
 .left .leftMiddle .triangle1 {
   border-left: 300px solid transparent;
@@ -210,29 +210,16 @@ html, body {
 }
 
 .illustration {
-  width: 300px;
   position: absolute;
   bottom: 0;
   right: 0;
 }
-
-@media screen and (max-width: 800px) {
-  .resume {
-    flex-direction: column;
-  }
-
-  .left .leftMiddle .triangle1 {
-    border-left: 400px solid transparent;
-  }
-  .left .leftMiddle .triangle2 {
-    border-right: 400px solid transparent;
-  }
-
-  .middle .experienceCard .duration, .middle .experienceCard .organization, .middle .experienceCard .position {
-    display: block;
-  }
+.illustration img {
+  width: 300px;
 }
+
 .toTop {
+  display: none;
   position: fixed;
   right: 1%;
   bottom: 2%;
@@ -240,7 +227,6 @@ html, body {
   height: 50px;
   border-radius: 50%;
   background-color: rgba(51, 51, 51, 0.7);
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -283,5 +269,25 @@ html, body {
   }
   100% {
     bottom: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .resume {
+    flex-direction: column;
+  }
+
+  .middle .experienceCard .duration, .middle .experienceCard .organization, .middle .experienceCard .position {
+    display: block;
+  }
+
+  .illustration {
+    position: relative;
+  }
+  .illustration img {
+    float: right;
+  }
+
+  .toTop {
+    display: flex !important;
   }
 }

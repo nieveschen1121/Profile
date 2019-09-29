@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Nieves's profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
   <link rel="stylesheet" href="./style.css">
@@ -85,7 +86,7 @@
           <li class="certificate" v-for="c in certificates">{{c.name}}</li>
         </ul>
       </div>
-      <img src="./images/frog.svg" class="illustration" />
+      <div class="illustration"> <img src="images/frog.svg" /></div>
       <div class="toTop" @click="ToTop"><i class="fa fa-angle-double-up"></i></div>
     </div>
   </div>
