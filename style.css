@@ -20,7 +20,7 @@ html, body {
   display: flex;
 }
 
-.container, .left, .middle, .right {
+.container, .left, .middle, .right, .middleRight {
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -118,6 +118,9 @@ html, body {
 .middle .experienceCard .eventTitle {
   margin: 0;
 }
+.middle .experienceCard .eventTitle.mobile {
+  display: none;
+}
 .middle .experienceCard .title {
   display: inline-block;
   padding: 0;
@@ -204,6 +207,61 @@ html, body {
   font-size: 0.8rem;
 }
 
+.middleRight .topic {
+  position: absolute;
+  font-weight: 900;
+  left: 30px;
+}
+.middleRight .nav {
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middleRight .nav .pageButton {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  margin: 10px;
+  background-color: #333;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.middleRight .nav .pageButton.selected {
+  background-color: #FFB115;
+}
+.middleRight .nav .pageButton:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  box-shadow: 0 0 1px 3px rgba(255, 177, 21, 0.5);
+}
+.middleRight .autobiographies {
+  padding: 0 30px;
+}
+.middleRight .autobiographies::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(#00E6AA 0, #00AAA5 50%, #00E6AA 100%);
+  margin-left: -14px;
+}
+.middleRight .autobiographyCard::before, .middleRight .autobiographyCard::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #00E6AA;
+  background-color: #eee;
+  margin-left: -20px;
+}
+.middleRight .title {
+  font-weight: 900;
+}
+
 .topic {
   font-weight: 900;
   padding: 10px 0;
@@ -213,8 +271,13 @@ html, body {
   position: absolute;
   bottom: 0;
   right: 0;
+  cursor: pointer;
 }
 .illustration img {
+  transition: 0.5s;
+  width: 200px;
+}
+.illustration:hover img {
   width: 300px;
 }
 
@@ -278,6 +341,26 @@ html, body {
 
   .middle .experienceCard .duration, .middle .experienceCard .organization, .middle .experienceCard .position {
     display: block;
+  }
+  .middle .experienceCard .eventTitle.desktop {
+    display: none;
+  }
+  .middle .experienceCard .eventTitle.mobile {
+    display: block;
+  }
+  .middle .experienceCard .eventTitle .title {
+    display: block;
+  }
+  .middle .experienceCard .eventTitle .title .organization, .middle .experienceCard .eventTitle .title .position {
+    display: block;
+  }
+  .middle .experienceCard .eventTitle .duration {
+    color: #eee;
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00AAA5 0%, #00E6AA 100%);
   }
 
   .illustration {

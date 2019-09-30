@@ -40,12 +40,12 @@
           </div>
         </div>
       </div>
-      <div class="middle col-12 col-md-6">
+      <div class="middle col-12 col-md-6" v-show="displayType === 'profile'">
         <h3 class="topic">重點經歷</h3>
         <div class="experiences">
           <div class="experienceCard" v-for="exp in experiences">
             <div class="eventCard" v-for="e in exp">
-              <div class="eventTitle row">
+              <div class="eventTitle desktop row">
                 <div class="title col-6 col-sm-8">
                   <h5 class="organization">{{e.organization}}</h5>
                   <h5 class="position">{{e.position}}</h5>
@@ -55,6 +55,16 @@
                     v-if="e.duration.endYYYY"> - {{e.duration.endYYYY}}</span><span
                     v-if="e.duration.endMM">/{{e.duration.endMM.toString().padStart(2,0)}}</span></div>
               </div>
+              <div class="eventTitle mobile">
+                <div class="duration badge-pill badge-success"><span>{{e.duration.beginYYYY}}</span><span
+                    v-if="e.duration.beginMM">/{{e.duration.beginMM.toString().padStart(2,0)}}</span><span
+                    v-if="e.duration.endYYYY"> - {{e.duration.endYYYY}}</span><span
+                    v-if="e.duration.endMM">/{{e.duration.endMM.toString().padStart(2,0)}}</span></div>
+                <div class="title">
+                  <h5 class="organization">{{e.organization}}</h5>
+                  <h5 class="position">{{e.position}}</h5>
+                </div>
+              </div>
               <div class="description">{{e.description}}</div>
               <ul class="items">
                 <li class="item" v-for="i in e.items">{{i.description}}</li>
@@ -63,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="right col-12 col-sm-3">
+      <div class="right col-12 col-sm-3" v-show="displayType === 'profile'">
         <h3 class="topic"> <i class="icon fas fa-language"></i><span>語言能力</span></h3>
         <ul class="languages">
           <li class="language" v-for="lang in skills.language">
@@ -86,8 +96,31 @@
           <li class="certificate" v-for="c in certificates">{{c.name}}</li>
         </ul>
       </div>
-      <div class="illustration"> <img src="images/frog.svg" /></div>
-      <div class="toTop" @click="ToTop"><i class="fa fa-angle-double-up"></i></div>
+      <div class="middleRight col-12 col-md-9" v-show="displayType === 'autobiography'">
+        <div class="nav">
+          <div class="h3 topic">自傳</div>
+          <div class="pageButton" v-for="(b, i) in 2" :page="i+1" :key="'pageButton'+(i+1)" @click="switchPage"
+            :class="i === 0 ? 'selected' : ''"></div>
+        </div>
+        <div class="autobiographies">
+          <div class="autobiographyCard">
+            <div class="page1" v-show="autobiography.displayPage === 1">
+              <div class="background">
+                <h4 class="title">{{autobiography.background.title}}</h4>
+                <section class="content" v-html="autobiography.background.content"></section>
+              </div>
+            </div>
+            <div class="page2" v-show="autobiography.displayPage === 2">
+              <div class="other" v-for="other in autobiography.others">
+                <h4 class="title">{{other.title}}</h4>
+                <p class="content" v-html="other.content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="illustration"> <img src="images/frog.svg" @click="switchDisplayType" /></div>
+      <div class="toTop" @click="toTop"><i class="fa fa-angle-double-up"></i></div>
     </div>
   </div>
   <!-- partial -->
