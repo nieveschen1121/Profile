@@ -206,6 +206,11 @@ html, body {
   vertical-align: top;
   font-size: 0.8rem;
 }
+.right .illustration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 .middleRight .topic {
   position: absolute;
@@ -261,6 +266,10 @@ html, body {
 .middleRight .title {
   font-weight: 900;
 }
+.middleRight .illustration {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .topic {
   font-weight: 900;
@@ -268,16 +277,13 @@ html, body {
 }
 
 .illustration {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   cursor: pointer;
 }
 .illustration img {
-  transition: 0.5s;
   width: 200px;
+  transition: 0.5s;
 }
-.illustration:hover img {
+.illustration img:hover {
   width: 300px;
 }
 
@@ -364,10 +370,12 @@ html, body {
   }
 
   .illustration {
-    position: relative;
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   .illustration img {
-    float: right;
+    width: 300px;
   }
 
   .toTop {

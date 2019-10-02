@@ -95,12 +95,11 @@
         <ul class="certificates">
           <li class="certificate" v-for="c in certificates">{{c.name}}</li>
         </ul>
+        <div class="illustration"><img src="images/frog1.svg" @click="switchDisplayType" /></div>
       </div>
       <div class="middleRight col-12 col-md-9" v-show="displayType === 'autobiography'">
         <div class="nav">
           <div class="h3 topic">自傳</div>
-          <div class="pageButton" v-for="(b, i) in 2" :page="i+1" :key="'pageButton'+(i+1)" @click="switchPage"
-            :class="i === 0 ? 'selected' : ''"></div>
         </div>
         <div class="autobiographies">
           <div class="autobiographyCard">
@@ -109,8 +108,6 @@
                 <h4 class="title">{{autobiography.background.title}}</h4>
                 <section class="content" v-html="autobiography.background.content"></section>
               </div>
-            </div>
-            <div class="page2" v-show="autobiography.displayPage === 2">
               <div class="other" v-for="other in autobiography.others">
                 <h4 class="title">{{other.title}}</h4>
                 <p class="content" v-html="other.content"></p>
@@ -118,8 +115,8 @@
             </div>
           </div>
         </div>
+        <div class="illustration"><img src="images/frog2.svg" @click="switchDisplayType" /></div>
       </div>
-      <div class="illustration"> <img src="images/frog.svg" @click="switchDisplayType" /></div>
       <div class="toTop" @click="toTop"><i class="fa fa-angle-double-up"></i></div>
     </div>
   </div>

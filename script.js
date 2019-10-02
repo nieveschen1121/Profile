@@ -42,7 +42,8 @@ var resume = {
           { description: "擴大經營電子商務吸收 B2C 市場、維繫原本的 B2B 客群" },
           { description: "獨創立 Facebook 粉專、GMB 提高品牌曝光率" },
           { description: "學習 SEO 優化網頁讓水塔關鍵字排名保持在第一頁" },
-          { description: "2017 年至吉隆坡、亞庇拜訪外銷客戶、市場調查 - 2018 年至福島洽談機械手臂之運用、方形蓄水容器合作" },
+          { description: "2017 年至吉隆坡、亞庇拜訪外銷客戶、市場調查" },
+          { description: "2018 年至福島洽談機械手臂之運用、方形蓄水容器合作" },
         ]
       },
     ],
@@ -200,12 +201,12 @@ var vm = new Vue({
     toTop: function (e) {
       $("html, body").animate({ scrollTop: 0 }, 300);
     },
-    switchPage: function (e) {
-      let $button = $(e.target);
-      $button.parent(".nav").find(".pageButton").removeClass("selected");
-      $button.addClass("selected");
-      this.autobiography.displayPage = parseInt($button.attr("page"));
-    },
+    // switchPage: function (e) {
+    //   let $button = $(e.target);
+    //   $button.parent(".nav").find(".pageButton").removeClass("selected");
+    //   $button.addClass("selected");
+    //   this.autobiography.displayPage = parseInt($button.attr("page"));
+    // },
     switchDisplayType: function (e) {
       if (this.displayType === "profile") {
         this.displayType = "autobiography";
@@ -213,6 +214,8 @@ var vm = new Vue({
       else {
         this.displayType = "profile";
       }
+
+      this.toTop(e);
     }
   }
 });
