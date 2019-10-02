@@ -280,11 +280,11 @@ html, body {
   cursor: pointer;
 }
 .illustration img {
-  width: 200px;
+  width: 300px;
   transition: 0.5s;
 }
 .illustration img:hover {
-  width: 300px;
+  width: 400px;
 }
 
 .toTop {
