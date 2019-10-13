@@ -35,7 +35,7 @@ html, body {
 .left .leftTop {
   height: 30%;
   min-height: 270px;
-  background: linear-gradient(90deg, #00AAA5 0%, #00E6AA 100%);
+  background: linear-gradient(90deg, #009fde 0%, #009fde 100%);
 }
 .left .leftTop .figure {
   position: absolute;
@@ -63,12 +63,12 @@ html, body {
 }
 .left .leftMiddle .triangle1 {
   border-left: 300px solid transparent;
-  border-bottom: 50px solid #FFB115;
+  border-bottom: 50px solid #eee;
   right: 0;
 }
 .left .leftMiddle .triangle2 {
   border-right: 300px solid transparent;
-  border-bottom: 50px solid #FFB115;
+  border-bottom: 50px solid #eee;
   left: 0;
 }
 .left .leftBottom {
@@ -78,7 +78,7 @@ html, body {
   height: 100%;
   padding: 0 15px 30px 15px;
   bottom: 0;
-  background-color: #FFB115;
+  background-color: #eee;
 }
 .left .leftBottom .personalInfo {
   display: flex;
@@ -112,7 +112,7 @@ html, body {
   display: block;
   width: 3px;
   height: 100%;
-  background: linear-gradient(#00E6AA 0, #00AAA5 50%, #00E6AA 100%);
+  background: linear-gradient(#009fde 0, #009fde 50%, #009fde 100%);
   margin-left: -14px;
 }
 .middle .experienceCard .eventTitle {
@@ -153,7 +153,7 @@ html, body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 2px solid #00E6AA;
+  border: 2px solid #009fde;
   background-color: #eee;
   margin-left: -20px;
 }
@@ -189,7 +189,7 @@ html, body {
 }
 .right .languages .language .progressBar .outer {
   display: flex;
-  border: 1px solid #00E6AA;
+  border: 1px solid #009fde;
   border-radius: 50px;
   overflow: hidden;
   height: 80%;
@@ -199,7 +199,7 @@ html, body {
   justify-content: flex-end;
   align-items: center;
   padding-right: 5px;
-  background: linear-gradient(90deg, #00AAA5 0%, #00E6AA 80%, #eee 100%);
+  background: linear-gradient(90deg, #009fde 0%, #009fde 80%, #eee 100%);
   text-align: right;
 }
 .right .languages .language .progressBar .outer .innerBar .level {
@@ -250,7 +250,7 @@ html, body {
   display: block;
   width: 3px;
   height: 100%;
-  background: linear-gradient(#00E6AA 0, #00AAA5 50%, #00E6AA 100%);
+  background: linear-gradient(#009fde 0, #009fde 50%, #009fde 100%);
   margin-left: -14px;
 }
 .middleRight .autobiographyCard::before, .middleRight .autobiographyCard::after {
@@ -259,7 +259,7 @@ html, body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 2px solid #00E6AA;
+  border: 2px solid #009fde;
   background-color: #eee;
   margin-left: -20px;
 }
@@ -366,7 +366,7 @@ html, body {
     display: block;
     text-align: center;
     margin-bottom: 10px;
-    background: linear-gradient(90deg, #00AAA5 0%, #00E6AA 100%);
+    background: linear-gradient(90deg, #009fde 0%, #009fde 100%);
   }
 
   .illustration {
